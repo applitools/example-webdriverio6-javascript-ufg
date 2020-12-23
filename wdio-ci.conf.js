@@ -10,8 +10,7 @@
 
 const baseConfig = require('./wdio.conf.js');
 
-exports.config = {
-  ...baseConfig,
+exports.config = Object.assign({}, baseConfig, {
   capabilities: [
     {
       maxInstances: 5,
@@ -21,4 +20,4 @@ exports.config = {
       },
     },
   ],
-}
+})
